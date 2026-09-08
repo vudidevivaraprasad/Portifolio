@@ -17,26 +17,27 @@
             <div class="row g-3 align-items-start">
 
               <div class="col">
-                <h5 class="fw-bold mb-1">
-                  {{experience?.title}}
-                </h5>
-
-                <h6 class="fw-semibold mb-2">
-                  {{experience?.companyname}}
-                </h6>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h5 class="fw-bold mb-1">
+                      {{experience?.title}}
+                    </h5>
+                    <h6 class="fw-semibold mb-2">
+                      {{experience?.companyname}}
+                    </h6>
+                  </div>
+                  <div class="col-auto">
+                    <span class="date-badge">
+                      {{experience?.date}}
+                    </span>
+                  </div>
+                </div>
 
                 <ul class="mb-0 ps-3">
                   @for (responsibility of experience?.responsibilities;track responsibility){
                     <li>{{responsibility}}</li>
                   }
                 </ul>
-              </div>
-
-              <!-- Date -->
-              <div class="col-auto">
-                <span class="date-badge">
-                  {{experience?.date}}
-                </span>
               </div>
 
             </div>
