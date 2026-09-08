@@ -2,6 +2,7 @@ import { Component, effect, inject, input, output, signal } from '@angular/core'
 import { Contentful } from '../../services/contentful';
 import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -33,6 +34,21 @@ export class Navbar {
     }
 
     return pdfRequest;
+  }
+
+  async downloadResume(event: Event): Promise<void> {
+    event.preventDefault();
+
+    const resumeUrl = await firstValueFrom(this.getpdf('1gczy5kaOoIIDKOp9ASQRy'));
+    const response = await fetch(resumeUrl);
+    const resumeBlob = await response.blob();
+    const downloadUrl = URL.createObjectURL(resumeBlob);
+    const downloadLink = document.createElement('a');
+
+    downloadLink.href = downloadUrl;
+    downloadLink.download = 'resume.pdf';
+    downloadLink.click();
+    URL.revokeObjectURL(downloadUrl);
   }
 
   navItemClick(item:string){
