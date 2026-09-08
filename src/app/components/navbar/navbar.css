@@ -1,3 +1,8 @@
+.navbarbgmobile{
+  background-color: rgb(255 255 255 / 5%) !important;
+  backdrop-filter: blur(10px);
+}
+
 .navbarbg{
   background-color: rgb(16 27 46) !important;
 }
@@ -56,3 +61,6 @@
   cursor: pointer;
 }
 
+.btn-close {
+  background-color: white !important;
+}
