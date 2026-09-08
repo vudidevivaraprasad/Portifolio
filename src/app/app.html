@@ -1,6 +1,6 @@
 <app-navbar (selectedNavItem)="navigateTo($event)" [scrolledToNavItem]="activeSection()" />
 <section  id="Home">
-  <app-home [aboutMe]="aboutMeData()" />
+  <app-home [aboutMe]="aboutMeData()" (selectedNavItem)="navigateTo($event)" />
 </section>
 <section id="Skills">
   <app-skills [skills]="skillsData()" />

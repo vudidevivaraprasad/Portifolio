@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, input, OnInit, output, signal } from '@angular/core';
 import { contentfulAboutMeEntrySchema } from '../../interfaces/contentful';
 
 @Component({
@@ -11,8 +11,14 @@ export class Home {
 
   readonly aboutMe = input.required<contentfulAboutMeEntrySchema[]>();
 
+  selectedNavItem = output<string>();
+
   readonly aboutMedata = computed(() => {
     return this.aboutMe()?.[0]?.fields;
   })
+
+  navItemClick(item:string){
+    this.selectedNavItem.emit(item)
+  }
 
 }
