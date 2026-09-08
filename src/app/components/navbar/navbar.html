@@ -9,7 +9,7 @@
       }
     </div>
     <div class="col d-flex justify-content-end">
-      <button class="btn text-light btn-style"><i class="bi bi-download me-2"></i>Download Resume</button>
+      <a [href]="getpdf('1gczy5kaOoIIDKOp9ASQRy') | async" target="_blank"><button class="btn text-light btn-style"><i class="bi bi-download me-2"></i>Download Resume</button></a>
     </div>
   </div>
 </nav>
@@ -99,6 +99,9 @@
       <span>About</span>
 
     </a>
+
+    <a [href]="getpdf('1gczy5kaOoIIDKOp9ASQRy') | async" target="_blank" class="mobile-nav-item"><button class="btn text-light btn-style"><i class="bi bi-download me-2"></i>Download Resume</button></a>
+
 
   </div>
 
