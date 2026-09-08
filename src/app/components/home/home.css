@@ -1,6 +1,6 @@
 .home-main-div {
   width: 100%;
-  height: calc(100vh - 56px);
+  height: calc(100svh - 56px);
   overflow: hidden;
   background-image: url(/homebg.png);
   background-repeat: no-repeat;
@@ -129,7 +129,7 @@
 
 @media (max-width: 500px) {
   .home-main-div {
-    height: 100dvh;
+    height: calc(100svh - 56px);
   }
 
   .aboutbox {
