@@ -1,0 +1,27 @@
+<div class="skillbg ">
+  <div class="d-flex align-items-center justify-content-center py-3">
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between col-10">
+      <div>
+        <p class="text-light fw-bold m-0">SKILLS & TECHNOLOGIES</p>
+        <h3 class="text-light fw-bold">My Toolbox</h3>
+        <p class="text-light">Technologies I work withto bring ideas to life.</p>
+      </div>
+      <div class="col-md-6 col">
+        <button class="btn rounded text-light m-2" (click)="selectedSkill.set('All')" [class]="selectedSkill() === 'All' ? 'custom-orange-color': 'btn-style' ">All</button>
+        @for (skill of skillCategories();track skill){
+          <button class="btn text-light m-2 rounded" (click)="selectedSkill.set(skill)" [class]="selectedSkill() === skill ? 'custom-orange-color': 'btn-style' ">{{skill}}</button>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="col-10 d-flex my-3 overflow-x-scroll hide-scrollbar">
+      @for (skill of filteredSkillData();track skill){
+        <div class="p-3 skill-card rounded m-3 d-flex flex-column justify-content-center align-items-center">
+          <div class="skill-logo" [innerHTML]="skillLogo(skill)"></div>
+          <p class="text-center text-light m-0 p-0">{{skill?.name}}</p>
+        </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+.navbarbg{
+  background-color: rgb(16 27 46) !important;
+}
+
+.custom-border {
+  border-bottom: 3px solid rgb(250 169 126);
+}
+/* Mobile hamburger */
+
+.hamburger-btn {
+  position: fixed;
+
+  top: 15px;
+  left: 15px;
+
+  z-index: 1050;
+
+  font-size: 30px;
+}
+
+.hamburger-btn:has(~ #mobileMenu.show) {
+  display: none;
+}
+
+
+/* Mobile menu */
+
+.mobile-nav-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  font-size: 17px;
+}
+
+.mobile-nav-item i {
+  font-size: 22px;
+}
+
+.btn-style, .cursor-pointer:hover {
+  border: 2px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    inset 0 0 10px rgba(255, 255, 255, 0.02);
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+

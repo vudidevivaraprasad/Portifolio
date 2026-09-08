@@ -1,0 +1,29 @@
+<div class="d-flex flex-column align-items-center projectwhole">
+  <div class="pt-3">
+    <p class="m-0 text-center">FEATURED PROJECTS</p>
+    <h3 class="m-0 text-center fw-bold">Things I've Built</h3>
+  </div>
+  <!-- <div> -->
+    <div class="col-10 project-grid py-3">
+      @for (project of projectsData();track project.name){
+        <div class="card project-card border-0 rounded overflow-hidden">
+          <img [src]="getImage(project.homePageImage.sys.id) | async" class="card-img-top" alt="...">
+          <div class="card-body text-light" style="background-color: rgb(16 27 46);">
+            <h5 class="card-title fw-bold">{{project.name}}</h5>
+            <p class="card-text m-0">{{project.shortDescription}}</p>
+            <div class="d-flex overflow-scroll hide-scrollbar">
+              @for (skill of project.skillsUsed;track skill){
+                <button class="btn rounded m-2 text-nowrap text-light btn-style" >{{skill}}</button>
+              }
+            </div>
+            <hr class="col-12">
+            <div class="d-flex justify-content-between">
+              <a [href]="project.url" target="_blank" class="text-light text-decoration-none">Live Demo<i class="bi bi-arrow-right ms-1"></i></a>
+              <a [href]="project.sourceCode" target="_blank"  class="text-light text-decoration-none"><i class="bi bi-github me-1"></i>View Code</a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  <!-- </div> -->
+</div>

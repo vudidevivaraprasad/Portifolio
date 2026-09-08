@@ -1,0 +1,315 @@
+/* Bootstrap handles the grid/responsive layout.
+   Custom SCSS creates the paper/cinematic visual style. */
+
+.about-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(99,102,241,.12), transparent 28%),
+    linear-gradient(180deg, #050b15 0%, #07101c 100%);
+  color: #101827;
+}
+
+.about-paper,
+.connect-paper {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255,255,255,.94), rgba(246,248,252,.97)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(15,23,42,.025) 0,
+      rgba(15,23,42,.025) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.28),
+    0 3px 10px rgba(0,0,0,.18);
+}
+
+.about-paper {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border-radius: 6px 10px 18px 8px;
+}
+
+.connect-paper {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 10px 5px 16px 7px;
+}
+
+.about-paper::after,
+.connect-paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .35;
+  background:
+    radial-gradient(circle at 12% 90%, rgba(59,130,246,.08), transparent 18%),
+    radial-gradient(circle at 88% 20%, rgba(168,85,247,.07), transparent 20%);
+}
+
+.eyebrow {
+  margin-bottom: .45rem;
+  color: #4f8df7;
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.about-copy h2 {
+  margin-bottom: .75rem;
+  color: #07101d;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-weight: 800;
+}
+
+.lead-copy {
+  max-width: 650px;
+  margin-bottom: 1.25rem;
+  color: #34445b;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-meta {
+  color: #18263a;
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.about-meta i {
+  margin-right: .35rem;
+}
+
+/* Polaroid */
+.polaroid {
+  width: min(100%, 245px);
+  padding: 10px 10px 22px;
+  background: #fff;
+  box-shadow: 0 18px 30px rgba(15,23,42,.18);
+  transform: rotate(-4deg);
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.18 / 1;
+  object-fit: cover;
+}
+
+.polaroid-caption {
+  display: flex;
+  justify-content: center;
+  gap: .35rem;
+  padding-top: .75rem;
+  color: #24344d;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: .8rem;
+  transform: rotate(-2deg);
+}
+
+.polaroid-caption span:nth-child(2) { margin-top: .3rem; }
+.polaroid-caption span:nth-child(3) { margin-top: -.1rem; }
+
+/* Strengths */
+.strengths {
+  display: grid;
+  gap: 1rem;
+}
+
+.strength-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.strength-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 1.25rem;
+}
+
+.strength-icon.problem { color: #f59e0b; background: #fff0c8; }
+.strength-icon.team { color: #7c3aed; background: #eee4ff; }
+.strength-icon.learner { color: #0891b2; background: #d9f7f6; }
+.strength-icon.focused { color: #ef4444; background: #ffe1e5; }
+
+.strength-item h6 {
+  margin: 0 0 .15rem;
+  color: #172238;
+  font-size: .95rem;
+  font-weight: 800;
+}
+
+.strength-item p {
+  margin: 0;
+  color: #506078;
+  font-size: .78rem;
+}
+
+/* Handwritten annotation */
+.handwritten-note {
+  position: absolute;
+  top: 42%;
+  right: 28%;
+  color: #293b56;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: 1rem;
+  line-height: 1.25;
+  transform: rotate(-8deg);
+}
+
+.handwritten-note span {
+  display: block;
+  margin-left: 35px;
+  font-size: 2rem;
+  transform: rotate(25deg);
+}
+
+/* Connect */
+.connect-paper h3 {
+  margin-bottom: .5rem;
+  color: #07101d;
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+  font-weight: 800;
+}
+
+.connect-paper p {
+  margin: 0;
+  color: #4b5b72;
+  line-height: 1.6;
+  font-size: .9rem;
+}
+
+.contact-card {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .85rem;
+  border: 1px solid rgba(30,41,59,.08);
+  border-radius: 12px;
+  background: rgba(255,255,255,.75);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(15,23,42,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.contact-card:hover {
+  color: inherit;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(15,23,42,.12);
+}
+
+.contact-card > i {
+  flex: 0 0 26px;
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+.email-icon { color: #8b5cf6; }
+.linkedin-icon { color: #0a66c2; }
+.github-icon { color: #111827; }
+
+.contact-card span { min-width: 0; }
+
+.contact-card strong,
+.contact-card small {
+  display: block;
+}
+
+.contact-card strong {
+  color: #172238;
+  font-size: .85rem;
+}
+
+.contact-card small {
+  overflow: hidden;
+  color: #64748b;
+  font-size: .65rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.message-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  min-height: 48px;
+  padding: .75rem 1.15rem;
+  border: 1px solid rgba(103,232,249,.35);
+  border-radius: 13px;
+  background: #071523;
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(7,21,35,.25);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.message-button:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(7,21,35,.35);
+}
+
+.message-doodle {
+  margin-bottom: .35rem;
+  color: #34445b;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: .85rem;
+  line-height: 1.1;
+  transform: rotate(-5deg);
+}
+
+.message-doodle span {
+  margin-right: .4rem;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 991.98px) {
+  .about-paper,
+  .connect-paper {
+    padding: 1.5rem;
+  }
+
+  .polaroid {
+    margin-bottom: 1rem;
+  }
+
+  .strengths {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-paper,
+  .connect-paper {
+    padding: 1.1rem;
+  }
+
+  .strengths {
+    grid-template-columns: 1fr;
+  }
+
+  .polaroid {
+    width: 220px;
+  }
+
+  .lead-copy {
+    font-size: .9rem;
+  }
+
+  .about-meta {
+    font-size: .82rem;
+  }
+}

@@ -1,0 +1,161 @@
+<section id="about" class="about-section py-5">
+  <div class="container">
+
+    <div class="about-paper">
+      <div class="row g-4 align-items-center">
+
+        <div class="col-12 col-lg-3">
+          <div class="polaroid mx-auto">
+            <img
+              src="/about-mountain-photo.png"
+              alt="Person standing on a mountain overlooking a valley"
+              class="img-fluid"
+            />
+            <div class="polaroid-caption">
+              <span>Explorer</span>
+              <span>Learner</span>
+              <span>Developer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="about-copy">
+            <div class="eyebrow">ABOUT ME</div>
+            <h2>More Than Just a Developer</h2>
+
+            <p class="lead-copy">
+              I'm an Angular developer who enjoys building intuitive and
+              scalable web applications. I believe in writing clean code,
+              creating meaningful user experiences and constantly improving.
+              I'm always curious to learn, explore and take on new challenges.
+            </p>
+
+            <div class="about-meta d-flex flex-wrap gap-3">
+              <span><i class="bi bi-geo-alt-fill"></i> India</span>
+              <span><i class="bi bi-mortarboard-fill"></i> B.Tech</span>
+              <span><i class="bi bi-briefcase-fill"></i> Open to opportunities</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <div class="strengths">
+
+            <div class="strength-item">
+              <div class="strength-icon problem">
+                <i class="bi bi-lightbulb-fill"></i>
+              </div>
+              <div>
+                <h6>Problem Solver</h6>
+                <p>I enjoy solving real-world problems</p>
+              </div>
+            </div>
+
+            <div class="strength-item">
+              <div class="strength-icon team">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <div>
+                <h6>Team Player</h6>
+                <p>I love collaborating and learning</p>
+              </div>
+            </div>
+
+            <div class="strength-item">
+              <div class="strength-icon learner">
+                <i class="bi bi-rocket-takeoff-fill"></i>
+              </div>
+              <div>
+                <h6>Quick Learner</h6>
+                <p>Always curious to learn new things</p>
+              </div>
+            </div>
+
+            <div class="strength-item">
+              <div class="strength-icon focused">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+              <div>
+                <h6>Focused</h6>
+                <p>Committed to building great products</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="connect-paper mt-4">
+      <div class="row g-4 align-items-center">
+
+        <div class="col-12 col-lg-4">
+          <div class="eyebrow">LET'S CONNECT</div>
+          <h3>Let's Build Something Great</h3>
+          <p>
+            I'm always open to discussing new opportunities, interesting
+            projects or just having a chat about technology.
+          </p>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="row g-3">
+
+            <div class="col-12 col-md-4">
+              <a class="contact-card" [href]="'mailto:'+aboutMedata()?.mail">
+                <i class="bi bi-envelope-fill email-icon"></i>
+                <span>
+                  <strong>Email</strong>
+                  <small>{{aboutMedata()?.mail}}</small>
+                </span>
+              </a>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <a class="contact-card"
+                 [href]="aboutMedata()?.linkedIn"
+                 target="_blank"
+                 rel="noopener">
+                <i class="bi bi-linkedin linkedin-icon"></i>
+                <span>
+                  <strong>LinkedIn</strong>
+                  <small>{{aboutMedata()?.linkedIn}}</small>
+                </span>
+              </a>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <a class="contact-card"
+                 [href]="aboutMedata()?.gitHub"
+                 target="_blank"
+                 rel="noopener">
+                <i class="bi bi-github github-icon"></i>
+                <span>
+                  <strong>GitHub</strong>
+                  <small>{{aboutMedata()?.gitHub}}</small>
+                </span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-2 text-lg-end">
+          <div class="message-doodle d-none d-lg-block">
+            <span>✈</span>
+            Drop<br />a message!
+          </div>
+
+          <a class="message-button" [href]="'mailto:'+aboutMedata()?.mail">
+            Send a Message
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

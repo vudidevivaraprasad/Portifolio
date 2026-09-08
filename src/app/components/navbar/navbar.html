@@ -1,0 +1,105 @@
+<nav class="navbar navbarbg side-navbar position-sticky top-0 d-none d-lg-block shadow-lg z-3">
+  <div class="container-fluid d-flex justify-content-between">
+    <a class="navbar-brand col" style="cursor: pointer;">
+      <img src="/logo.png" alt="Portfolio logo" style="width: 3rem;">
+    </a>
+    <div class="col-6 d-flex justify-content-around">
+      @for (item of NavItems();track item) {
+        <a class="navbar-brand text-light fw-bold"  style="cursor: pointer;" [class]="selected() === item ? 'custom-border': '' " (click)="navItemClick(item)">{{item}}</a>
+      }
+    </div>
+    <div class="col d-flex justify-content-end">
+      <button class="btn text-light btn-style"><i class="bi bi-download me-2"></i>Download Resume</button>
+    </div>
+  </div>
+</nav>
+
+
+<button
+  class="btn hamburger-btn d-lg-none bg-dark"
+  type="button"
+  data-bs-toggle="offcanvas"
+  data-bs-target="#mobileMenu"
+  aria-controls="mobileMenu">
+
+  <i class="bi bi-list text-light"></i>
+
+</button>
+
+
+<!-- Mobile Navigation -->
+<div
+  class="offcanvas offcanvas-start navbarbg"
+  tabindex="-1"
+  id="mobileMenu">
+
+  <div class="offcanvas-header">
+    <button
+      type="button"
+      class="btn-close bg-light"
+      data-bs-dismiss="offcanvas">
+    </button>
+
+  </div>
+
+  <div class="offcanvas-body">
+
+    <a
+      (click)="navItemClick('Home')"
+      class="mobile-nav-item text-light cursor-pointer"
+      [class]="selected() === 'Home' ? 'btn-style' : '' "
+      data-bs-dismiss="offcanvas"
+      >
+
+      <i class="bi bi-house"></i>
+      <span>Home</span>
+
+    </a>
+
+    <a
+    (click)="navItemClick('Skills')"
+      class="mobile-nav-item text-light cursor-pointer"
+      [class]="selected() === 'Skills' ? 'btn-style' : '' "
+      data-bs-dismiss="offcanvas">
+
+      <i class="bi bi-person"></i>
+      <span>Skills</span>
+
+    </a>
+
+    <a
+    (click)="navItemClick('Projects')"
+      class="mobile-nav-item text-light cursor-pointer"
+      [class]="selected() === 'Projects' ? 'btn-style' : '' "
+      data-bs-dismiss="offcanvas">
+
+      <i class="bi bi-briefcase"></i>
+      <span>Projects</span>
+
+    </a>
+
+    <a
+    (click)="navItemClick('Experience')"
+      class="mobile-nav-item text-light cursor-pointer "
+      [class]="selected() === 'Experience' ? 'btn-style' : '' "
+      data-bs-dismiss="offcanvas">
+
+      <i class="bi bi-person-workspace"></i>
+      <span>Experience</span>
+
+    </a>
+
+    <a
+    (click)="navItemClick('About')"
+      class="mobile-nav-item text-light cursor-pointer"
+      [class]="selected() === 'About' ? 'btn-style' : '' "
+      data-bs-dismiss="offcanvas">
+
+      <i class="bi bi-chat-dots"></i>
+      <span>About</span>
+
+    </a>
+
+  </div>
+
+</div>

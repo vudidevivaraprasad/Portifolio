@@ -1,0 +1,42 @@
+.custom-orange-color {
+  background: rgb(250 169 126);
+}
+
+.skill-logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.skill-logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.skill-card, .btn-style {
+  background: rgb(255 255 255 / 5%);
+  backdrop-filter: blur(8px);
+}
+
+.btn-style {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    inset 0 0 10px rgba(255, 255, 255, 0.02);
+}
+
+.skillbg {
+  background-image: url(/skillsbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

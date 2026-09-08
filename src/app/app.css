@@ -1,0 +1,18 @@
+#Home,
+#Skills,
+#Experience,
+#Projects,
+#About {
+  scroll-margin-top: 44.2px;
+}
+
+@media (max-width:991px) {
+  #Home,
+#Skills,
+#Experience,
+#Projects,
+#About {
+  scroll-margin-top: 0;
+}
+
+}
