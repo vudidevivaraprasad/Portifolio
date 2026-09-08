@@ -7,7 +7,7 @@
     <div class="col-10 project-grid py-3">
       @for (project of projectsData();track project.name){
         <div class="card project-card border-0 rounded overflow-hidden">
-          <img [src]="getImage(project.homePageImage.sys.id) | async" class="card-img-top" alt="...">
+          <a [href]="project.url" target="_blank"><img [src]="getImage(project.homePageImage.sys.id) | async" class="card-img-top" alt="..."></a>
           <div class="card-body text-light" style="background-color: rgb(16 27 46);">
             <h5 class="card-title fw-bold">{{project.name}}</h5>
             <p class="card-text m-0">{{project.shortDescription}}</p>
